@@ -70,7 +70,7 @@ const RootQuery = new GraphQLObjectType({
     },
   },
 });
-
+//647f9483678d626ed6883ba6
 // Mutations
 const mutation = new GraphQLObjectType({
   name: 'Mutation',
@@ -183,6 +183,8 @@ const mutation = new GraphQLObjectType({
     },
   },
 });
+
+'647f89d464fa163b9781e2a7';
 
 module.exports = new GraphQLSchema({
   query: RootQuery,
