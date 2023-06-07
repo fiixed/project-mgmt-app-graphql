@@ -2,10 +2,15 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 
+const client = new ApolloClient({
+  uri: 'http://localhost:8000/graphql',
+  cache: new InMemoryCache(),
+});
+
 function App() {
   return (
     <>
-      {/* <ApolloProvider client={client}> */}
+      <ApolloProvider client={client}>
       <Router>
         <Header />
         <div className="container">
@@ -16,7 +21,7 @@ function App() {
           </Routes>
         </div>
       </Router>
-      {/* </ApolloProvider> */}
+      </ApolloProvider>
     </>
   );
 }
